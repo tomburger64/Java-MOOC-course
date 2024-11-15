@@ -1,1 +1,1 @@
-currently here https://java-programming.mooc.fi/part-1/2-printing
+currently here https://java-programming.mooc.fi/part-1/3-reading
