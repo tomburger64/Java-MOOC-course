@@ -10,6 +10,7 @@ public class Message {
 
         System.out.println("Write a message:");
         // Write your program here
-
+        String userMsg = scanner.nextLine(); //ask for input as var value
+        System.out.println(userMsg); //log var
     }
 }
