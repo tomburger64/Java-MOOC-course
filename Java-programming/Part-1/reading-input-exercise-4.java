@@ -10,6 +10,11 @@ public class Greeting {
         Scanner scanner = new Scanner(System.in);
 
         // Write your program here
-
+        // log question
+        System.out.println("What's your name ?");
+        // ask for user input as var value
+        String userName = scanner.nextLine();
+        // log string + var
+        System.out.println("Hi " + userName);
     }
 }
