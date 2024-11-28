@@ -27,11 +27,15 @@ public class Conversation {
         System.out.println("Oh, how interesting. Tell me more!");
         System.out.println(scanner.nextLine());
         System.out.println("Thanks for sharing!");
-        
+
+        // accepted solution when submitted :
         System.out.println("Greetings! How are you doing?");
-        System.out.println(scanner.nextLine());
+        String msg1 = scanner.nextLine();
         System.out.println("Oh, how interesting. Tell me more!");
-        System.out.println(scanner.nextLine());
+        String msg2 = scanner.nextLine();
         System.out.println("Thanks for sharing!");
+
+        // in comparison my solution actually sends back the input messages, not  that it was asked but it allows for a conversation on the same level (through output messages)
+        // now I know it wasn't asked and it's just all about how I perceived it at first but I believe it wasn't wrong either to approach it the way I did
     }
 }
