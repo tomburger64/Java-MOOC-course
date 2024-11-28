@@ -11,6 +11,13 @@ public class MessageThreeTimes {
 
         System.out.println("Write a message:");
         // Write your program here
-
+        
+        // user input var
+        String userMsg = scanner.nextLine();
+        
+        // log that user input 3 times
+        System.out.println(userMsg);
+        System.out.println(userMsg);
+        System.out.println(userMsg);
     }
 }
