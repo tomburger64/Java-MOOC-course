@@ -11,7 +11,7 @@ public class Greeting {
 
         // Write your program here
         // log question
-        System.out.println("What's your name ?");
+        System.out.println("What's your name?");
         // ask for user input as var value
         String userName = scanner.nextLine();
         // log string + var
