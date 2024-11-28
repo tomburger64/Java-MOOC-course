@@ -21,5 +21,17 @@ public class Conversation {
 
         // Write your program here
 
+        //I'm not supposed to call the nextLine() directly in the sout but it works
+        System.out.println("Greetings! How are you doing?");
+        System.out.println(scanner.nextLine());
+        System.out.println("Oh, how interesting. Tell me more!");
+        System.out.println(scanner.nextLine());
+        System.out.println("Thanks for sharing!");
+        
+        System.out.println("Greetings! How are you doing?");
+        System.out.println(scanner.nextLine());
+        System.out.println("Oh, how interesting. Tell me more!");
+        System.out.println(scanner.nextLine());
+        System.out.println("Thanks for sharing!");
     }
 }
