@@ -22,5 +22,13 @@ public class Story {
         Scanner scanner = new Scanner(System.in);
 
         // Write your program here
+        System.out.println("What is the main character called?");
+        String charName = scanner.nextLine();
+        
+        System.out.println("What is their job?");
+        String charJob = scanner.nextLine();
+        
+        System.out.println("Here is the story:");
+        System.out.println("Once upon a time, there was " + charName + " who was a " + charJob + ".\nOn the way to work, " + charName + " reflected on life.\nPerhaps " + charName + " will not be a " + charJob + " forever.");
     }
 }
