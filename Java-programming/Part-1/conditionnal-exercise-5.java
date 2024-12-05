@@ -17,5 +17,14 @@ public class Positivity {
         Scanner scan = new Scanner(System.in);
 
         // Write your program here
+        System.out.println("Give a number:");
+        int num = Integer.valueOf(scan.nextLine());
+
+        // i would've put >= here but I guess 0 is "neutral" technically, not positive nor negative (true 0, not 0.00...01)
+        if (num > 0) {
+            System.out.println("The number is positive.");
+        } else {
+            System.out.println("The number is not positive.");
+        }
     }
 }
