@@ -26,5 +26,19 @@ public class LeapYear {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // had to cheat, I'm not accustomed to '%' yet but I think I got what happens below, no idea if I could redo it as I've never had to use modulo once before (outside of exercises like these
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    System.out.println("The year is a leap year.");
+                } else {
+                    System.out.println("The year is not a leap year.");
+                }
+            } else {
+                System.out.println("The year is a leap year.");
+            }
+        } else {
+            System.out.println("The year is not a leap year.");
+        }
     }
 }
