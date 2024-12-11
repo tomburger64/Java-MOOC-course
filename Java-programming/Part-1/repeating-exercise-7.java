@@ -25,5 +25,20 @@ public class NumberAndSumOfNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        int howManyNum = 0;
+        int numSum = 0;
+        
+        while (true) {
+            System.out.println("Give a number:");
+            int num = Integer.valueOf(scanner.nextLine());
+            
+            if (num == 0) {
+                System.out.println("Number of numbers: " + howManyNum + "\nSum of the numbers: " + numSum);
+                break;
+            } else {
+                howManyNum = howManyNum + 1;
+                numSum = numSum + num;
+            }
+        }
     }
 }
