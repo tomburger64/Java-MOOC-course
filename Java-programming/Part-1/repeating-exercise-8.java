@@ -24,5 +24,21 @@ public class AverageOfNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        int numOfNum = 0;
+        int numSum = 0;
+        
+        while (true) {
+            System.out.println("Give a number:");
+            int num = Integer.valueOf(scanner.nextLine());
+            
+            if (num == 0) {
+                double numAvg = 1.00 * numSum / numOfNum;
+                System.out.println("Average of the numbers: " + numAvg);
+                break;
+            } else {
+                numSum = numSum + num;
+                numOfNum = numOfNum + 1;
+            }
+        }
     }
 }
