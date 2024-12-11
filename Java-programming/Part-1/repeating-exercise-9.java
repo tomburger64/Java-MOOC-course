@@ -32,5 +32,22 @@ public class AverageOfPositiveNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        int numSum = 0;
+        int numOfNum = 0;
+        
+        while (true) {
+            int num = Integer.valueOf(scanner.nextLine());
+            
+            if (num == 0) {
+                double numPosAvg = 1.00 * numSum / numOfNum;
+                System.out.println(numPosAvg);
+                break;
+            } else if (num > 0) {
+                numOfNum = numOfNum + 1;
+                numSum = numSum + num;
+            } else if (numOfNum <= 0) {
+                System.out.println("Cannot calculate the average");
+            }
+        }
     }
 }
