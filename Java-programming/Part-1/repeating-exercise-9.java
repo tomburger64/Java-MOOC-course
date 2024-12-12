@@ -25,6 +25,15 @@ Cannot calculate the average
 1.0 */
 
 
+// for some reason I can't validate the exercise, my code works but I keep getting the following error:
+/* When input was:
+0
+, the expected out put was:
+nnot
+Output was not found. */
+// no idea what to do as this doesn't make much sense to me
+
+
 import java.util.Scanner;
 
 public class AverageOfPositiveNumbers {
@@ -45,6 +54,7 @@ public class AverageOfPositiveNumbers {
             } else if (num > 0) {
                 numOfNum = numOfNum + 1;
                 numSum = numSum + num;
+                continue;
             } else if (numOfNum <= 0) {
                 System.out.println("Cannot calculate the average");
             }
