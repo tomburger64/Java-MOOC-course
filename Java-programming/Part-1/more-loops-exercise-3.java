@@ -29,12 +29,15 @@ public class FromWhereToWhere {
         Scanner scanner = new Scanner(System.in);
 
         // Write your program here
-        // part 1
+        // part 1 & 2
         System.out.println("Where to?");
-        int num = Integer.valueOf(scanner.nextLine());
+        int end = Integer.valueOf(scanner.nextLine());
         
-        for (int i = 1; i <= num; i++) {
-            System.out.println(i);
+        System.out.println("Where from?");
+        
+        
+        for (int start = Integer.valueOf(scanner.nextLine()); start <= end; start++) {
+            System.out.println(start);
         }
     }
 }
