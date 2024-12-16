@@ -18,5 +18,17 @@ public class SumOfASequence {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Last number?");
+        int num = Integer.valueOf(scanner.nextLine());
+        
+        // adds value + 1 until asked value (num) is reached
+        // then add the asked value (loop doesn't sum it by itself)
+        int sum = 0;
+        for (int n = 1; n != num; n++) {
+            sum = sum + n;
+        }
+        sum = sum + num;
+        
+        System.out.println("The sum is " + sum);
     }
 }
