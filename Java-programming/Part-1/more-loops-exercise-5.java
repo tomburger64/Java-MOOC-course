@@ -23,5 +23,20 @@ public class SumOfASequenceTheSequel {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("First number?");
+        int num1 = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println("Last number?");
+        int num2 = Integer.valueOf(scanner.nextLine());
+        
+        // from asked value 1 to value 2, sums the interval(s) by adding 1
+        // also adds value 2 to the sum (doesn't do it by itslef)
+        int sum = 0;
+        for (int n = num1; n != num2; n++) {
+            sum = sum + n;
+        }
+        sum = sum + num2;
+        
+        System.out.println("The sum is: " + sum);
     }
 }
