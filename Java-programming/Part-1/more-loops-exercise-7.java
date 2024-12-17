@@ -35,5 +35,14 @@ public class RepeatingBreakingAndRemembering {
         
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Give numbers:");
+        while (true) {
+            int num = Integer.valueOf(scanner.nextLine());
+            
+            if (num == -1) {
+                System.out.println("Thx! Bye!");
+                break;
+            }
+        }
     }
 }
