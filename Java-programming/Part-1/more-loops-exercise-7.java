@@ -37,25 +37,37 @@ public class RepeatingBreakingAndRemembering {
 
         System.out.println("Give numbers:");
         
-        System.out.println("Give numbers:");
-        
         int sum = 0;
         int numOfNum = 0;
+        int evenNum = 0;
+        int oddNum = 0;
         
         while (true) {
             int num = Integer.valueOf(scanner.nextLine());
             
             if (num == -1) {
                 System.out.println("Thx! Bye!");
+                
                 System.out.println("Sum: " + sum);
+                
                 System.out.println("Numbers: " + numOfNum);
                 
                 double avg = 1.00 * sum / numOfNum;
                 System.out.println("Average: " + avg);
+                
+                System.out.println("Even: " + evenNum);
+                System.out.println("Odd: " + oddNum);
+                
                 break;
             } else {
                 sum += num;
                 numOfNum++;
+                
+                if (num % 2 == 0) {
+                    evenNum++;
+                } else {
+                    oddNum++;
+                }
             }
         }
     }
