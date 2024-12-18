@@ -37,6 +37,8 @@ public class RepeatingBreakingAndRemembering {
 
         System.out.println("Give numbers:");
         
+        System.out.println("Give numbers:");
+        
         int sum = 0;
         int numOfNum = 0;
         
@@ -47,6 +49,9 @@ public class RepeatingBreakingAndRemembering {
                 System.out.println("Thx! Bye!");
                 System.out.println("Sum: " + sum);
                 System.out.println("Numbers: " + numOfNum);
+                
+                double avg = 1.00 * sum / numOfNum;
+                System.out.println("Average: " + avg);
                 break;
             } else {
                 sum += num;
