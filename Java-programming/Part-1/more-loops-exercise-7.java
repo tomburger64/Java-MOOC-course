@@ -38,6 +38,7 @@ public class RepeatingBreakingAndRemembering {
         System.out.println("Give numbers:");
         
         int sum = 0;
+        int numOfNum = 0;
         
         while (true) {
             int num = Integer.valueOf(scanner.nextLine());
@@ -45,9 +46,11 @@ public class RepeatingBreakingAndRemembering {
             if (num == -1) {
                 System.out.println("Thx! Bye!");
                 System.out.println("Sum: " + sum);
+                System.out.println("Numbers: " + numOfNum);
                 break;
             } else {
                 sum += num;
+                numOfNum++;
             }
         }
     }
