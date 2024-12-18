@@ -36,12 +36,18 @@ public class RepeatingBreakingAndRemembering {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Give numbers:");
+        
+        int sum = 0;
+        
         while (true) {
             int num = Integer.valueOf(scanner.nextLine());
             
             if (num == -1) {
                 System.out.println("Thx! Bye!");
+                System.out.println("Sum: " + sum);
                 break;
+            } else {
+                sum += num;
             }
         }
     }
