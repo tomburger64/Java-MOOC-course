@@ -21,11 +21,19 @@ public static void main(String[] args) {
 
 
 
-public class FromParameterToOne {
+    public class FromParameterToOne {
 
-    public static void main(String[] args) {
+        // can't seem to pass the exercise as I get an "indentation error", yet can't find one and the error message doesn't mean anything ("line 3 expected 0 but was 4" and more)
 
+        public static void main(String[] args) {
+            printFromNumberToOne(3);
+        }
+        
+        public static void printFromNumberToOne(int number) {
+            number += 1;
+            for (int i = 1; number != i; number--) {
+                System.out.println(number - 1);
+            }
+        }
 
     }
-
-}
