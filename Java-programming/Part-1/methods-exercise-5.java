@@ -22,8 +22,20 @@ public static void main(String[] args) {
 public class FromParameterToOne {
 
     public static void main(String[] args) {
-
-
+        printFromNumberToOne(2);
+    }
+    
+    public static void printFromNumberToOne(int number) {
+        System.out.println(number);
+        
+        while (true) {
+            if (number > 1) {
+                number--;
+                System.out.println(number);
+            } else {
+                break;
+            }
+        }
     }
 
 }
