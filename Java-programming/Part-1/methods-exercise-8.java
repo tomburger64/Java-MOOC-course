@@ -9,5 +9,9 @@ public class NumberUno {
         Scanner scanner = new Scanner(System.in);
 
     }
+    
+    public static int numberUno() {
+        return 1;
+    }
 
 }
