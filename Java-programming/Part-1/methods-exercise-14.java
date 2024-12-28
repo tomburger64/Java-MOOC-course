@@ -85,6 +85,8 @@ public class StarSign {
         System.out.println("\n---");
         System.out.println("triangle");
         printTriangle(3);
+        printTriangle(5);
+        printTriangle(9);
         System.out.println("\n---");
     }
 
@@ -113,5 +115,8 @@ public class StarSign {
 
     public static void printTriangle(int size) {
         // fourth part of the exercise
+        for (int n = 0; n <= size; n++) {
+            printStars(n);
+        }
     }
 }
