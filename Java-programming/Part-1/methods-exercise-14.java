@@ -55,7 +55,9 @@ public class StarSign {
         printStars(3);
         printStars(9);
         System.out.println("\n---");  // printing --- between the shapes
-        //printSquare(4);
+        printSquare(4);
+        printSquare(6);
+        printSquare(1); // works lol
         System.out.println("\n---");
         printRectangle(5, 6);
         System.out.println("\n---");
@@ -75,11 +77,8 @@ public class StarSign {
     public static void printSquare(int size) {
         // second part of the exercise
         for (int n = 0; n < size; n++) {
-            for (int i = 0; i < size; i++) {
-                System.out.println("*");
-            }
+            printStars(size);
         }
-        
     }
 
     public static void printRectangle(int width, int height) {
