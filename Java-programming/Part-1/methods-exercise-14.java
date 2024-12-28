@@ -97,8 +97,8 @@ public class StarSign {
 
     public static void printRectangle(int width, int height) {
         // third part of the exercise
-        for (int n = 0; n < width; n++) {
-            printStars(height);
+        for (int n = 0; n < height; n++) {
+            printStars(width);
         }
     }
 
