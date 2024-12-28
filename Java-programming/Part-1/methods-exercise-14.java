@@ -28,7 +28,7 @@ The output of the program:
 
 N.B multipart exercises can be uploaded to the server (click the button to the right of the testing button) even if some parts are unfinished. In this case the server will complain about the tests for the parts that haven't been completed, but it will mark down the finished parts.
 
-Printing a square
+Part 2: Printing a square
 
 Define a method called printSquare(int size) that prints a suitable square with the help of the printStars method. So the method call printSquare(4) results in the following output:
 
@@ -40,7 +40,15 @@ Define a method called printSquare(int size) that prints a suitable square with 
 
 N.B.: producing the correct output is not enough; the rows of the square must be produced by calling the printStars method inside the printSquaremethod.
 
-When creating the program, you can use the code in the main to test that the methods behave as required. */
+When creating the program, you can use the code in the main to test that the methods behave as required.
+
+Part 3: Printing a rectangle
+
+Write a method called printRectangle(int width, int height) that prints the correct rectangle by using the printStars method. So the method call printRectangle(17, 3) should produce the following output:
+
+*****************
+*****************
+***************** */
 
 
 public class StarSign {
