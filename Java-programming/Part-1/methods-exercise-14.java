@@ -26,20 +26,7 @@ The output of the program:
 ***
 *********
 
-N.B multipart exercises can be uploaded to the server (click the button to the right of the testing button) even if some parts are unfinished. In this case the server will complain about the tests for the parts that haven't been completed, but it will mark down the finished parts.
-
-Part 2: Printing a square
-
-Define a method called printSquare(int size) that prints a suitable square with the help of the printStars method. So the method call printSquare(4) results in the following output:
-
-****
-****
-****
-****
-
-N.B.: producing the correct output is not enough; the rows of the square must be produced by calling the printStars method inside the printSquaremethod.
-
-When creating the program, you can use the code in the main to test that the methods behave as required. */
+N.B multipart exercises can be uploaded to the server (click the button to the right of the testing button) even if some parts are unfinished. In this case the server will complain about the tests for the parts that haven't been completed, but it will mark down the finished parts. */
 
 
 public class StarSign {
@@ -62,9 +49,6 @@ public class StarSign {
 
     public static void printStars(int number) {
         // first part of the exercise
-        for (int n = 0; n < number; n++) {
-            System.out.println("*");
-        }
     }
 
     public static void printSquare(int size) {
