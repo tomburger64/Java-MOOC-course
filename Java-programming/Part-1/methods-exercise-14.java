@@ -48,7 +48,16 @@ Write a method called printRectangle(int width, int height) that prints the corr
 
 *****************
 *****************
-***************** */
+*****************
+
+Printing a triangle
+
+Create a method called printTriangle(int size) that prints a triangle by using the printStars method. So the call printTriangle(4) should print the following:
+
+*
+**
+***
+**** */
 
 
 public class StarSign {
