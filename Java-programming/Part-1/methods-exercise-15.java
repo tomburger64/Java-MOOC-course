@@ -45,7 +45,18 @@ The call christmasTree(10) should print:
         ***
         ***
 
-NB: heights shorter than 3 don't have to work correctly! */
+NB: heights shorter than 3 don't have to work correctly! 
+
+IT ALL WORKS BUT the correction system won't even give me clear error messages, like :
+ComparisonFailure: You printed incorrectly when printTriangle(3) was  called. expected:<  [*
+ **
+]***
+> but was:<  [ *
+  **
+ ]***
+>
+
+I guuess the IDE just writes better star signs */
 
 
 public class AdvancedAstrology {
@@ -84,6 +95,37 @@ public class AdvancedAstrology {
 
     public static void christmasTree(int height) {
         // part 3 of the exercise
+        int starCount = 0;
+        int reverseStarCount = 0;
+        
+        int spaceCountForBase = 0;
+        
+        for (int i = height; i > 0; i--) {
+            starCount++;
+            printSpaces(i);
+            printStars(starCount);
+            // remove "ln" from the method's sout or it'll keep skipping a line #funlife
+            
+            if (starCount > 1) {
+                reverseStarCount++;
+                printStars(reverseStarCount);
+            }
+            
+            System.out.println("");
+            
+            if (i == height - 2) {
+                spaceCountForBase = i + 1;
+            }
+        }
+        
+        //tree base
+        printSpaces(spaceCountForBase);
+        printStars(3);
+        System.out.println("");
+        
+        printSpaces(spaceCountForBase);
+        printStars(3);
+        
     }
 
     public static void main(String[] args) {
@@ -96,5 +138,10 @@ public class AdvancedAstrology {
         System.out.println("\n\n---");
         
         printTriangle(4);
+        
+        System.out.println("\n\n---");
+        
+        // only 2 doesn't work
+        christmasTree(5);
     }
 }
