@@ -10,10 +10,20 @@ public class AdvancedAstrology {
 
     public static void printStars(int number) {
         // part 1 of the exercise
+        String stars = "";
+        for (int n = 0; n < number; n++) {
+            stars += "*";
+        }
+        System.out.println(stars);
     }
 
     public static void printSpaces(int number) {
         // part 1 of the exercise
+        String spaces = "";
+        for (int i =0; i < number; i++) {
+            spaces += " ";
+        }
+        System.out.println(spaces);
     }
 
     public static void printTriangle(int size) {
@@ -27,10 +37,8 @@ public class AdvancedAstrology {
     public static void main(String[] args) {
         // The tests are not checking the main, so you can modify it freely.
 
-        printTriangle(5);
-        System.out.println("---");
-        christmasTree(4);
-        System.out.println("---");
-        christmasTree(10);
+        printStars(5);
+        System.out.println("spaces right here:");
+        printSpaces(3);
     }
 }
