@@ -15,7 +15,37 @@ Create a method called printTriangle(int size) that uses printSpaces and printSt
  ***
 ****
 
-↑ done, but doesn't detect the spaces when I submit it for the automated verification so whatever */
+↑ done, but doesn't detect the spaces when I submit it for the automated verification so whatever
+
+Part 3: Printing a Christmas tree
+
+Define a method called christmasTree(int height) that prints the correct Christmas tree. The Christmas tree consists of a triangle with the specified height as well as the base. The base is two stars high and three stars wide, and is placed at the center of the triangle's bottom. The tree is to be constructed by using the methods printSpaces and printStars.
+
+For example, the call christmasTree(4) should print the following:
+
+   *
+  ***
+ *****
+*******
+  ***
+  ***
+
+The call christmasTree(10) should print:
+
+         *
+        ***
+       *****
+      *******
+     *********
+    ***********
+   *************
+  ***************
+ *****************
+*******************
+        ***
+        ***
+
+NB: heights shorter than 3 don't have to work correctly! */
 
 
 public class AdvancedAstrology {
