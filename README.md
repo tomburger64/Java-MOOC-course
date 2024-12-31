@@ -2,4 +2,6 @@ This course is from the helsinki uni, is opensource and free, and also used to b
 
 https://java-programming.mooc.fi/part-1/
 
-currently here https://java-programming.mooc.fi/part-2
+https://java-programming.mooc.fi/part-2
+
+currently here https://java-programming.mooc.fi/part-3
