@@ -40,6 +40,9 @@ public class FirstAndLast {
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("")) {
+                int listSize = list.size();
+                System.out.println(list.get(0));
+                System.out.println(list.get(listSize - 1));
                 break;
             }
 
