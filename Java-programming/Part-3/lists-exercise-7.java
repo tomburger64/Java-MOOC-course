@@ -25,6 +25,7 @@ public class RememberTheseNumbers {
         while (true) {
             int luku = Integer.valueOf(scanner.nextLine());
             if (luku == -1) {
+                System.out.println(numbers);
                 break;
             }
 
