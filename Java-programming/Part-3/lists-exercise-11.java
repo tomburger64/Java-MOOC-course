@@ -41,6 +41,32 @@ public class IndexOfSmallest {
         // and its index -- the smallest number
         // might appear multiple times
 
+        int smallest = 999999;
+        int foundIndex = 0;
         
+        ArrayList<Integer> inputs = new ArrayList<>();
+        while (true) {
+            int input = Integer.valueOf(scanner.nextLine());
+            inputs.add(input);
+            
+            if (input == 9999) {
+                
+                // find the smallest value of the list
+                for (int i = 0; i < inputs.size(); i++) {
+                    if (smallest > inputs.get(i)) {
+                        smallest = inputs.get(i);
+                        foundIndex = i;
+                    } else if (smallest == inputs.get(i)) {
+                        System.out.println("(else if)");
+                        System.out.println("Found at index: " + i);
+                    }
+                }
+                
+                // final output and break
+                System.out.println("Smallest number: " + smallest);
+                System.out.println("Found at index: " + foundIndex);
+                break;
+            }
+        }
     }
 }
