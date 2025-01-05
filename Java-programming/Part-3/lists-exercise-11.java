@@ -25,6 +25,7 @@ Found at index: 3
 
 Hint: combine the programs you wrote for the exercises "Greatest number in the list" and "Index of the requested number". First find the smallest number, and then find the index of that number. */
 
+// started struggling because of stuff like iterating the list in the while loop, iterating variables in the wrong places and also had to cheat to figure out a way to output all the indexes for the same smallest value if there are several of them (was only outputing the last known
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -42,9 +43,12 @@ public class IndexOfSmallest {
         // might appear multiple times
 
         int smallest = 999999;
-        int foundIndex = 0;
         
+        // list for saving inputs
         ArrayList<Integer> inputs = new ArrayList<>();
+        // list for saving the inputs' indices
+        ArrayList<Integer> indices = new ArrayList<>();
+        
         while (true) {
             int input = Integer.valueOf(scanner.nextLine());
             inputs.add(input);
@@ -55,16 +59,19 @@ public class IndexOfSmallest {
                 for (int i = 0; i < inputs.size(); i++) {
                     if (smallest > inputs.get(i)) {
                         smallest = inputs.get(i);
-                        foundIndex = i;
+                        indices.add(i);
                     } else if (smallest == inputs.get(i)) {
-                        System.out.println("(else if)");
-                        System.out.println("Found at index: " + i);
+                        // if smallest value is there several times, add the index to the index list
+                        indices.add(i);
                     }
                 }
                 
                 // final output and break
                 System.out.println("Smallest number: " + smallest);
-                System.out.println("Found at index: " + foundIndex);
+                // looping through indices list to print all the values
+                for (int i = 0; i < indices.size(); i++){
+                    System.out.println("Found at index: " + indices.get(i));
+                }
                 break;
             }
         }
