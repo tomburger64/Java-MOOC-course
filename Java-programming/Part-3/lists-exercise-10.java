@@ -44,7 +44,14 @@ public class IndexOf {
             list.add(input);
         }
 
-        System.out.println("");
+        System.out.println("Search for?");
+        int searchFor = Integer.valueOf(scanner.nextLine());
+        
+        for (int n = 0; n < list.size(); n++) {
+            if (list.get(n) == searchFor) {
+                System.out.println(searchFor + " is at index " + n);
+            }
+        }
 
         // implement here finding the indices of a number
     }
