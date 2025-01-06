@@ -24,5 +24,12 @@ public class AverageOfAList {
         // Then it computes the average of the numbers on the list
         // and prints it.
         
+        while (true) {
+            int input = Integer.valueOf(scanner.nextLine());
+            
+            if (input == -1) {
+                break;
+            }
+        }
     }
 }
