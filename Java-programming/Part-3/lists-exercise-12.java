@@ -11,6 +11,7 @@ Modify the program so that after reading the numbers it calculates and prints th
 Sum: 93 */
 
 
+// I'm just glad I got to know how  the map() function worked in javascript beforhand (this exercise is an introduction to for each loops)
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,7 +23,13 @@ public class SumOfAList {
         ArrayList<Integer> list = new ArrayList<>();
         while (true) {
             int input = Integer.valueOf(scanner.nextLine());
+            
             if (input == -1) {
+                int sum = 0;
+                for (int num : list) {
+                    sum += num;
+                }
+                System.out.println(sum);
                 break;
             }
 
