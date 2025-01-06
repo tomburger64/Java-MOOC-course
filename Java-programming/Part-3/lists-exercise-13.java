@@ -11,6 +11,7 @@ When reading ends, calculate the average of the numbers in it, and then print th
 Average: 23.25 */
 
 
+// I can't keep myself from iterating stuff at the beginning of loops, losing too much time because of stuff like this
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -24,10 +25,28 @@ public class AverageOfAList {
         // Then it computes the average of the numbers on the list
         // and prints it.
         
+        int numCount = 0;
+        int sum = 0;
+        double avg = 0;
+            
+        ArrayList<Integer> inputs = new ArrayList<>();
+        
         while (true) {
+            
             int input = Integer.valueOf(scanner.nextLine());
             
-            if (input == -1) {
+            if (input != -1) {
+                inputs.add(input);
+                continue;
+            } else if (input == -1) {
+                for (int num : inputs) {
+                    numCount++;
+                    sum += num;
+                }
+                
+                avg = 1.00 * sum / numCount;
+                System.out.println("Average: " + avg);
+                
                 break;
             }
         }
