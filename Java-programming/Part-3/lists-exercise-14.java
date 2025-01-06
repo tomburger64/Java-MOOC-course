@@ -31,6 +31,15 @@ public class OnTheList {
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("")) {
+                System.out.println("Search for?");
+                String lastInput = scanner.nextLine();
+                
+                if (list.contains(lastInput)) {
+                    System.out.println(lastInput + " was found !");
+                } else {
+                    System.out.println(lastInput + " was not found!");
+                }
+                
                 break;
             }
 
