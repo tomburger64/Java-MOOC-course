@@ -37,6 +37,22 @@ public class IndexWasNotFound {
         int searching = Integer.valueOf(scanner.nextLine());
 
         // Implement the search functionality here
+
+        // DO NOT FORGET TO PUT A BREAK AFTER OR IT'LL PRINT THE LAST INDEX WHERE THE VALUE OCCURED
+        // (the only one asked is the first one)
+        int wasFoundAt = -1;
+        for (int i = 0; i < array.length; i++) {
+            if (searching == array[i]) {
+                wasFoundAt = i;
+                break;
+            }
+        }
+        
+        if (wasFoundAt == -1) {
+            System.out.println(searching + " was not found.");
+        } else {
+            System.out.println(searching + " is at index " + wasFoundAt + ".");
+        } 
     }
 
 }
