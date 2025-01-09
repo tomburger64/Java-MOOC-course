@@ -24,6 +24,17 @@ public class Printer {
 
     public static void printArrayInStars(int[] array) {
         // Write some code in here
+
+        for (int i = 0; i < array.length; i++) {
+            int starCount = 0;
+
+            // note to self: if doesn't alw<ays suit any condition, while is also a thing
+            while (starCount < array[i]) {
+                System.out.print("*");
+                starCount++;
+            }
+            System.out.println("");
+        }
     }
 
 }
