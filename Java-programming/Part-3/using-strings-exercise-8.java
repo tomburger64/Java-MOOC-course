@@ -19,11 +19,11 @@ public class AgeOfTheOldest {
 
         while (true) {
             String input = scanner.nextLine();
+            int oldest = 0;
             if (input.equals("")) {
                 break;
             } else {
                 String[] inputs = input.split(",");
-                int oldest = 0;
             
                 for (int i = 0; i < inputs.length; i++) {
                     if (Integer.valueOf(inputs[i]) > oldest) {
