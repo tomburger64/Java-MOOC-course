@@ -17,6 +17,21 @@ public class AgeOfTheOldest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equals("")) {
+                break;
+            } else {
+                String[] inputs = input.split(",");
+                int oldest = 0;
+            
+                for (int i = 0; i < inputs.length; i++) {
+                    if (Integer.valueOf(inputs[i]) > oldest) {
+                        oldest = Integer.valueOf(inputs[i]);
+                    }
+                }
+                System.out.println("Age of the oldest: " + oldest);
+            }
+        }
     }
 }
