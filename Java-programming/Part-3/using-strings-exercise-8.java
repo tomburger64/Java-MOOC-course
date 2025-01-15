@@ -10,7 +10,7 @@ gabriel,10
 Age of the oldest: 10 */
 
 
-// what I did yesterday (doesn't work, idk why)
+// what I did yesterday (doesn't work, idk why, it's a weird approach)
 /* import java.util.Scanner;
 
 public class AgeOfTheOldest {
