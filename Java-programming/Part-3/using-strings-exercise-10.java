@@ -33,6 +33,29 @@ public class PersonalDetails {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
+        String longestName = "";
+        int sum = 0;
+        int count = 0;
+        
+        while (true) {
+            String input = scanner.nextLine();
+            
+            if (input.equals("")) {
+                break;
+            } else {
+                String[] people = input.split(",");
+                
+                if (longestName.length() < people[0].length()) {
+                    longestName = people[0];
+                }
+                sum += Integer.valueOf(people[1]);
+                count ++;
+            }
+        }
+        
+        double avg = 1.00 * sum / count;
+        
+        System.out.println("Longest name: " + longestName);
+        System.out.println("Average of the birth years: " + avg);
     }
 }
