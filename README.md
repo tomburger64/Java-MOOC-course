@@ -4,4 +4,6 @@ https://java-programming.mooc.fi/part-1/
 
 https://java-programming.mooc.fi/part-2
 
-currently here https://java-programming.mooc.fi/part-3
+https://java-programming.mooc.fi/part-3
+
+currently here https://java-programming.mooc.fi/part-4
