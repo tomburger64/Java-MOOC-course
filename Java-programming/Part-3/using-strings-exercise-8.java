@@ -10,7 +10,8 @@ gabriel,10
 Age of the oldest: 10 */
 
 
-import java.util.Scanner;
+// what I did yesterday (doesn't work, idk why)
+/* import java.util.Scanner;
 
 public class AgeOfTheOldest {
 
@@ -33,5 +34,32 @@ public class AgeOfTheOldest {
                 System.out.println("Age of the oldest: " + oldest);
             }
         }
+    }
+} */
+
+
+// I'm so mad it worked first try after I struggled for like 40 mins on this yesterday
+import java.util.Scanner;
+
+public class AgeOfTheOldest {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int oldest = 0;
+        while (true) {
+            String input = scanner.nextLine();
+            
+            if (input.equals("")) {
+                break;
+            } else {
+                String[] people = input.split(",");
+                
+                if (oldest < Integer.valueOf(people[1])) {
+                    oldest = Integer.valueOf(people[1]);
+                }
+            }
+        }
+        System.out.println("Age of the oldest: " + oldest);
     }
 }
