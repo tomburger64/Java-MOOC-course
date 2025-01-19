@@ -14,15 +14,18 @@ Dog
 
 The class doesn't do much yet. However, practicing this step is valuable for what is to come. */
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-import java.util.Scanner;
-
-public class DogAttributes {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Follow the instructions carefully
-        // and run the tests.
-    }
+/**
+ *
+ * @author tom64
+ */
+public class Dog {
+    private String name;
+    private String breed;
+    private int age;
 }
