@@ -15,25 +15,18 @@ Kvaak
 Peef
 Kvaak */
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author tomla
- */
-public class Whistle {
-    private String sound;
-    
-    public Whistle(String whistleSound) {
-        this.sound = whistleSound;
-        System.out.println(whistleSound);
-    }
-    
-    public void sound() {
+//  will probably start making folders for exercises now since they're starting to use a few files
+// a few new concepts to me, will take notes for myself
+
+//main
+
+public class Main {
+
+    public static void main(String[] args) {
+        // This is just an empty main method you can use to test
+        // the Whistle class. Try for example:
+
         Whistle duckWhistle = new Whistle("Kvaak");
         Whistle roosterWhistle = new Whistle("Peef");
 
@@ -42,3 +35,22 @@ public class Whistle {
         duckWhistle.sound();
     }
 }
+
+
+// class
+/**
+ *
+ * @author tom64
+ */
+public class Whistle {
+    private String sound;
+    
+    public Whistle(String whistleSound) {
+        this.sound = whistleSound;
+    }
+    
+    public void sound() {
+        System.out.println(this.sound);
+    }
+}
+
