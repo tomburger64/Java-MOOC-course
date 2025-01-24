@@ -43,13 +43,17 @@ public class Main {
  * @author tom64
  */
 public class Whistle {
+    // making private string var
     private String sound;
     
     public Whistle(String whistleSound) {
+    // making the creator, taking in argument a string (will be given when called from main)
         this.sound = whistleSound;
+        // makes the private var = to the value of the given value
     }
     
     public void sound() {
+    // simply prints the private var which just took the value of the given value through the constructor
         System.out.println(this.sound);
     }
 }
