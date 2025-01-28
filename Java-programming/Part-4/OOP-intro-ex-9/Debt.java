@@ -22,7 +22,7 @@ public class Debt {
     }
     
     public void waitOneYear() {
-        // ↓ fix this
-        //this.balance * this.interestRate;
+        // where does the value go??
+        balance *= interestRate;
     }
 }
