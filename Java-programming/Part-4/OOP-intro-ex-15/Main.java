@@ -36,8 +36,58 @@ public class MainProgram {
 }
 The program prints the following:
 
-Sample output
 Count: 4 */
+
+/* Part 2: Sum and average
+Expand the class with the following functionality:
+
+the sum method tells the sum of the numbers added (the sum of an empty number statistics object is 0)
+the average method tells the average of the numbers added (the average of an empty number statistics object is 0
+The class' template is the following:
+
+public class Statistics {
+    private int count;
+    private int sum;
+
+    public Statistics() {
+        // initialize the variables count and sum here
+    }
+
+    public void addNumber(int number) {
+        // write code here
+    }
+
+    public int getCount() {
+        // write code here
+    }
+
+    public int sum() {
+        // write code here
+    }
+
+    public double average() {
+        // write code here
+    }
+}
+The following program demonstrates the class' use:
+
+public class Main {
+    public static void main(String[] args) {
+        Statistics statistics = new Statistics();
+        statistics.addNumber(3);
+        statistics.addNumber(5);
+        statistics.addNumber(1);
+        statistics.addNumber(2);
+        System.out.println("Count: " + statistics.getCount());
+        System.out.println("Sum: " + statistics.sum());
+        System.out.println("Average: " + statistics.average());
+    }
+}
+The program prints the following:
+
+Count: 4
+Sum: 11
+Average: 2.75 */
 
 
 import java.util.Scanner;
