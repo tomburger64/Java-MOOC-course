@@ -89,6 +89,21 @@ Count: 4
 Sum: 11
 Average: 2.75 */
 
+/* Part 3: Sum of user input
+Write a program that asks the user for numbers until the user enters -1. The program will then provide the sum of the numbers.
+
+The program should use a Statistics object to calculate the sum.
+
+NOTE: Do not modify the Statistics class in this part. Instead, implement the program for calculating the sum by making use of it.
+
+Enter numbers:
+4
+2
+5
+4
+-1
+Sum: 15 */
+
 
 import java.util.Scanner;
 
