@@ -141,14 +141,27 @@ public class MainProgram {
         // and lastly the one that tracks the sum of odd numbers!
         
         Statistics statistics = new Statistics();
+        Statistics statisticsEven = new Statistics();
+        Statistics statisticsOdd = new Statistics();
         
         while (true) {
+            // sum
             int input = Integer.valueOf(scanner.nextLine());
             if (input == -1) {
                 System.out.println("Sum: " + statistics.sum());
+                
+                System.out.println("Sum of even numbers: " + statisticsEven.sum());
+                
+                System.out.println("Sum of even numbers: " + statisticsOdd.sum());
                 break;
             } else {
                 statistics.addNumber(input);
+                
+                if (input % 2 == 0) {
+                    statisticsEven.addNumber(input);
+                } else {
+                    statisticsOdd.addNumber(input);
+                }
             }
         }
     }
