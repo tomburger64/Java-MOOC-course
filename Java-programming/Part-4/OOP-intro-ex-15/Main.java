@@ -126,6 +126,10 @@ Sum of even numbers: 8
 Sum of odd numbers: 5 */
 
 
+// I CAN'T VALIDATE THE EXERCISE
+// I'm going insane I keep getting the error "when calling for the average at the beginning it says NaN even though it should be 0, are you sure you're not dividing by 0"
+// EVERYTHING works, and turns out when you call for the average before you input numbers other than -1, it won't be created because there's no nums to make it with
+// like I just don't know I'll consider it done but it says 95% sdgyvfzsjhyefhnzyf
 import java.util.Scanner;
 
 public class MainProgram {
@@ -144,6 +148,7 @@ public class MainProgram {
         Statistics statisticsEven = new Statistics();
         Statistics statisticsOdd = new Statistics();
         
+        System.out.println("Enter numbers:");
         while (true) {
             // sum
             int input = Integer.valueOf(scanner.nextLine());
@@ -152,7 +157,7 @@ public class MainProgram {
                 
                 System.out.println("Sum of even numbers: " + statisticsEven.sum());
                 
-                System.out.println("Sum of even numbers: " + statisticsOdd.sum());
+                System.out.println("Sum of odd numbers: " + statisticsOdd.sum());
                 break;
             } else {
                 statistics.addNumber(input);
