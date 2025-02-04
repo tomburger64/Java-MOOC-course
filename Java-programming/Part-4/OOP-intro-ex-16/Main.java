@@ -103,6 +103,38 @@ The card has a balance 0.40000000000000036 euros
 
 The second call to the method eatHeartily above did not affect the balance, since the balance would have otherwise become negative. */
 
+/* Part 4: Topping up the card
+Add the following method to the PaymentCard class:
+
+public void addMoney(double amount) {
+    // write code here
+}
+The purpose of the method is to increase the card's balance by the amount of money given as a parameter. However, the card's balance may not exceed 150 euros. As such, if the amount to be topped up exceeds this limit, the balance should, in any case, become exactly 150 euros.
+
+The following main program tests the class:
+
+public class MainProgram {
+    public static void main(String[] args) {
+        PaymentCard card = new PaymentCard(10);
+        System.out.println(card);
+
+        card.addMoney(15);
+        System.out.println(card);
+
+        card.addMoney(10);
+        System.out.println(card);
+
+        card.addMoney(200);
+        System.out.println(card);
+    }
+}
+The program should print the following:
+
+The card has a balance of 10.0 euros
+The card has a balance of 25.0 euros
+The card has a balance of 35.0 euros
+The card has a balance of 150.0 euros */
+
 
 public class MainProgram {
 
