@@ -153,6 +153,40 @@ The program should print the following:
 Paul: The card has a balance of 10.0 euros
 Paul: The card has a balance of 10.0 euros */
 
+/* Part 6: Multiple cards
+Write code in the main method of the MainProgram class that contains the following sequence of events:
+
+Create Paul's card. The opening balance of the card is 20 euros
+Create Matt's card. The opening balance of the card is 30 euros
+Paul eats heartily
+Matt eats affordably
+The cards' values ​​are printed (each on its own line, with the cardholder name at the beginning of it)
+Paul tops up 20 euros
+Matt eats heartily
+The cards' values ​​are printed (each on its own line, with the cardholder name at the beginning of it)
+Paul eats affordably
+Paul eats affordably
+Matt tops up 50 euros
+The cards' values ​​are printed (each on its own line, with the cardholder name at the beginning of it)
+The main program's template is as follows:
+
+public class Main {
+    public static void main(String[] args) {
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+
+        // write code here
+    }
+}
+The program should produce the following print output:
+
+Paul: The card has a balance of 15.4 euros
+Matt: The card has a balance of 27.4 euros
+Paul: The card has a balance of 35.4 euros
+Matt: The card has a balance of 22.799999999999997 euros
+Paul: The card has a balance of 30.199999999999996 euros
+Matt: The card has a balance of 72.8 euros */
+
 
 public class MainProgram {
 
