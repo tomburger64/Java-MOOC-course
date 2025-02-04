@@ -45,6 +45,39 @@ The program should print the following:
 
 The card has a balance of 50.0 euros */
 
+/* Part 2: Making transactions
+Complement the PaymentCard class with the following methods:
+
+public void eatAffordably() {
+    // write code here
+}
+
+public void eatHeartily() {
+    // write code here
+}
+The method eatAffordably should reduce the card's balance by € 2.60, and the method eatHeartily should reduce the card's balance by € 4.60.
+
+The following main program tests the class:
+
+public class MainProgram {
+    public static void main(String[] args) {
+        PaymentCard card = new PaymentCard(50);
+        System.out.println(card);
+
+        card.eatAffordably();
+        System.out.println(card);
+
+        card.eatHeartily();
+        card.eatAffordably();
+        System.out.println(card);
+    }
+}
+The program should print approximately the following:
+
+The card has a balance of 50.0 euros
+The card has a balance of 47.4 euros
+The card has a balance of 40.199999999999996 euros */
+
 
 public class MainProgram {
 
