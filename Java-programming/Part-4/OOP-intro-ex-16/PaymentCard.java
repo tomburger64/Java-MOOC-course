@@ -11,11 +11,17 @@ public class PaymentCard {
     }
     
     public void eatAffordably() {
-        this.balance -= 2.60;
+        double isNeg = this.balance - 2.60;
+        if (isNeg >= 0) {
+            this.balance = isNeg;
+        }
     }
     
     public void eatHeartily(){
-        this.balance -= 4.60;
+        double isNeg = this.balance - 4.60;
+        if (isNeg >= 0) {
+            this.balance = isNeg;
+        }
     }
     
 }
