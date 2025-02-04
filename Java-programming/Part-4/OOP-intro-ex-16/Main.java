@@ -78,6 +78,32 @@ The card has a balance of 50.0 euros
 The card has a balance of 47.4 euros
 The card has a balance of 40.199999999999996 euros */
 
+/* Part 3: Non-negative balance
+What happens if the card runs out of money? It doesn't make sense in this case for the balance to turn negative. Change the methods eatAffordably and eatHeartily so that they don't reduce the balance should it turn negative.
+
+The following main program tests the class:
+
+public class MainProgram {
+    public static void main(String[] args) {
+        PaymentCard card = new PaymentCard(5);
+        System.out.println(card);
+
+        card.eatHeartily();
+        System.out.println(card);
+
+        card.eatHeartily();
+        System.out.println(card);
+    }
+}
+The program should print the following:
+
+Sample output
+The card has a balance 5.0 euros
+The card has a balance 0.40000000000000036 euros
+The card has a balance 0.40000000000000036 euros
+
+The second call to the method eatHeartily above did not affect the balance, since the balance would have otherwise become negative. */
+
 
 public class MainProgram {
 
