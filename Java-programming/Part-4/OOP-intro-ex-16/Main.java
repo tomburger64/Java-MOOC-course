@@ -135,6 +135,24 @@ The card has a balance of 25.0 euros
 The card has a balance of 35.0 euros
 The card has a balance of 150.0 euros */
 
+/* Part 5: Topping up the card with a negative value
+Change the addMoney method further, so that if there is an attempt to top it up with a negative amount, the value on the card will not change.
+
+The following main program tests the class:
+
+public class MainProgram {
+    public static void main(String[] args) {
+        PaymentCard card = new PaymentCard(10);
+        System.out.println("Paul: " + card);
+        card.addMoney(-15);
+        System.out.println("Paul: " + card);
+    }
+}
+The program should print the following:
+
+Paul: The card has a balance of 10.0 euros
+Paul: The card has a balance of 10.0 euros */
+
 
 public class MainProgram {
 
