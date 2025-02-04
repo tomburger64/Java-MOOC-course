@@ -97,7 +97,6 @@ public class MainProgram {
 }
 The program should print the following:
 
-Sample output
 The card has a balance 5.0 euros
 The card has a balance 0.40000000000000036 euros
 The card has a balance 0.40000000000000036 euros
@@ -110,14 +109,13 @@ public class MainProgram {
     public static void main(String[] args) {
         // Scanner scanner = new Scanner(System.in);
         
-        PaymentCard card = new PaymentCard(50);
-        System.out.println(card);
-
-        card.eatAffordably();
+        PaymentCard card = new PaymentCard(5);
         System.out.println(card);
 
         card.eatHeartily();
-        card.eatAffordably();
+        System.out.println(card);
+
+        card.eatHeartily();
         System.out.println(card);
     }
 }
