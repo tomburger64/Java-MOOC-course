@@ -24,4 +24,13 @@ public class PaymentCard {
         }
     }
     
+    public void addMoney(double amount) {
+        double isTooMuch = this.balance + amount;
+        if (isTooMuch > 150) {
+            this.balance = 150;
+        } else {
+            this.balance += amount;
+        }
+    }
+    
 }
