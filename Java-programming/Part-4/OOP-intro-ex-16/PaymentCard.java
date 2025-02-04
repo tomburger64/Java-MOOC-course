@@ -28,6 +28,8 @@ public class PaymentCard {
         double isTooMuch = this.balance + amount;
         if (isTooMuch > 150) {
             this.balance = 150;
+        } else if (amount <= 0) {
+            // I know there's other ways to do this but I'd rather do it the way it's told in the exercise
         } else {
             this.balance += amount;
         }
