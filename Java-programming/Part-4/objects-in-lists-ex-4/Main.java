@@ -57,6 +57,28 @@ public class Main {
         
         // implement here the program that allows the user to enter 
         // book information and to examine them
+        Scanner scanner = new Scanner(System.in);
 
+        while (true) {
+            System.out.println("Title: ");
+            String title = scanner.nextLine();
+            
+            if (title.equals("")) {
+                break;
+            }
+            
+            System.out.println("Pages: ");
+            int pages = Integer.valueOf(scanner.nextLine());
+            
+            System.out.println("Publication year: ");
+            int pubYear = Integer.valueOf(scanner.nextLine());
+        }
+        
+        System.out.println("What information will be printed? ");
+        String input = scanner.nextLine();
+        
+        if (input.equals("everything")){
+            System.out.println("");
+        }
     }
 }
