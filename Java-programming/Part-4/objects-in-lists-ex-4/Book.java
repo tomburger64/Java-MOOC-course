@@ -12,7 +12,7 @@ public class Book {
     
     // Everything
     public String returnE() {
-        return this.title + ", " + this.pages + ", " + this.pubYear;
+        return this.title + ", " + this.pages + " pages, " + this.pubYear;
     }
     
     public String returnTitle() {
