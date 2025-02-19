@@ -27,5 +27,28 @@ public class RecordsFromAFile {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Name of the file:");
+        String file = scanner.nextLine();
+        
+        try (Scanner fileReader = new Scanner(Paths.get(file))) {
+            while (fileReader.hasNextLine()){
+                String currentLine = fileReader.nextLine();
+                String[] splitting = currentLine.split(",");
+                
+                // print the right stuff
+                // determine if you write "10 years" or "10 year" depending on the num
+                String name = splitting[0];
+                int age = Integer.valueOf(splitting[1]);
+                String yearOrS;
+                if (age > 1) {
+                    yearOrS = " years";
+                } else {
+                    yearOrS = " year";
+                }
+                System.out.println(name + ", age: " + age + yearOrS);
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
     }
 }
