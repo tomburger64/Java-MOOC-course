@@ -19,6 +19,11 @@ amy, age: 1 year
 NB! The word "year" should be formatted based on the age. */
 
 
+// can't get the tests to accept my code for some reasons, the errors don't tell anything
+// stuff like "when input is *text from the data file*, output should be *the same data but split in the wanted format*
+// except my code is exactly like the wanted format (checked multiple times)
+// I even added handling of empty lines (wasn't asked but was just seen in the doc) and doesn't change anything either
+// whatever, this works how the exercise asks it to
 import java.nio.file.Paths;
 import java.util.Scanner;
 
@@ -34,6 +39,10 @@ public class RecordsFromAFile {
             while (fileReader.hasNextLine()){
                 String currentLine = fileReader.nextLine();
                 String[] splitting = currentLine.split(",");
+                
+                if (currentLine.isEmpty()) {
+                    continue;
+                }
                 
                 // print the right stuff
                 // determine if you write "10 years" or "10 year" depending on the num
