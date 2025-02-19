@@ -37,19 +37,52 @@ Sample data
 
 import java.nio.file.Paths;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class NumbersFromAFile {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("File? ");
+        System.out.println("File? ");
         String file = scanner.nextLine();
-        System.out.print("Lower bound? ");
+        System.out.println("Lower bound? ");
         int lowerBound = Integer.valueOf(scanner.nextLine());
-        System.out.print("Upper bound? ");
+        System.out.println("Upper bound? ");
         int upperBound = Integer.valueOf(scanner.nextLine());
 
+        int count = 0;
+        ArrayList<Integer> readNumList = new ArrayList<>();
+        
+        try (Scanner fileReader = new Scanner(Paths.get(file))) {
+            while (fileReader.hasNextLine()) {
+                
+                /* This is what I did originally:
+                if (Integer.valueOf(fileReader.nextLine()) >= lowerBound && Integer.valueOf(fileReader.nextLine()) <= upperBound) {
+                    // once converted to integer too,
+                    // what's read is added to the list
+                    // and the num count adds 1 to itself
+                    readNumList.add(Integer.valueOf(fileReader.nextLine()));
+                    count++;
+                }
+
+                I had to cheat with ai to discover that you can't do the "fileReader.nextLine()" more than once, at least in this context
+                My guess is that it's probably because it already is in a while loop and the timing is too fast to allow such a thing, hence why it was skipping some lines from being added to the list */
+                
+                /* once converted to integer via another variable (so it's reusable for both elements of the condition)
+                if what the file reader's reading is = or between the bounds */
+                int currentNum = Integer.valueOf(fileReader.nextLine());
+                if (currentNum >= lowerBound && currentNum <= upperBound) {
+                    // what was read is added to the list
+                    // the num count adds 1 to itself
+                    readNumList.add(currentNum);
+                    count++;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        System.out.println("Numbers: " + count);
     }
 
 }
