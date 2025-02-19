@@ -21,8 +21,10 @@ test
 Reading the file nonexistent.txt failed. */
 
 
+// still unsure about what I'm doing and need to check back on previous exs I did to know what I need to do, but I trust that I'll learn by practicing it overtime
 import java.nio.file.Paths;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class IsItInTheFile {
 
@@ -35,5 +37,20 @@ public class IsItInTheFile {
         System.out.println("Search for:");
         String searchedFor = scanner.nextLine();
 
+        ArrayList<String> wasRead = new ArrayList<>();
+        
+        try (Scanner fileReader = new Scanner(Paths.get(file))) {
+            while (fileReader.hasNextLine()) {
+                wasRead.add(fileReader.nextLine());
+            }
+        } catch (Exception e) {
+            System.out.println("Reading the file " + file + " failed.");
+        }
+        
+        if (wasRead.contains(searchedFor)) {
+            System.out.println("Found !");
+        } else {
+            System.out.println("Not found.");
+        }
     }
 }
