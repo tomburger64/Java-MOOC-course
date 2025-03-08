@@ -10,6 +10,7 @@ The exercise template already has a Person class, and the class StoringRecords h
 
 The exercise template has a main method that you can use to test how your program works. In this exercise, only modify the method readRecordsFromFile. */
 
+
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -36,6 +37,28 @@ public class StoringRecords {
 
         // Write here the code for reading from file
         // and printing the read records
+        try (Scanner reader = new Scanner(Paths.get(file))) {
+            while (reader.hasNextLine()) {
+                String line = reader.nextLine();
+                
+                String[] splits = line.split(",");
+                
+                String name = splits[0];
+                int age = Integer.valueOf(splits[1]);
+                
+                String yearWord;
+                if (Integer.valueOf(age) > 1) {
+                    yearWord = "years";
+                } else {
+                    yearWord = "year";
+                }
+                
+                System.out.println(name + ", age: " + age + " " + yearWord);
+                persons.add(new Person(name, age));
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
         return persons;
 
     }
