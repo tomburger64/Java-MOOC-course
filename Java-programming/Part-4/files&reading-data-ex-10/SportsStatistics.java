@@ -71,14 +71,32 @@ public class SportStatistics {
         String team = scanner.nextLine();
         
         int gameCount = 0;
+        int wins = 0;
+        int losses = 0;
         
         try (Scanner reader = new Scanner(Paths.get(file))) {
             while (reader.hasNextLine()) {
                 String line = reader.nextLine();
                 String[] splits = line.split(",");
                 
-                if (team.equals(splits[0]) || team.equals(splits[1])) {
+                if (team.equals(splits[0])) {
                     gameCount++;
+                    
+                    // if the team won or nah
+                    if (Integer.valueOf(splits[2]) > Integer.valueOf(splits[3])) {
+                        wins++;
+                    } else {
+                        losses++;
+                    }
+                } else if (team.equals(splits[1])) {
+                    gameCount++;
+                    
+                    // if the team won or nah
+                    if (Integer.valueOf(splits[3]) > Integer.valueOf(splits[2])) {
+                        wins++;
+                    } else {
+                        losses++;
+                    }
                 }
             }
         } catch (Exception e) {
@@ -86,6 +104,8 @@ public class SportStatistics {
         }
         
         System.out.println("Games: " + gameCount);
+        System.out.println("Wins: " + wins);
+        System.out.println("Losses: " + losses);
     }
 
 }
