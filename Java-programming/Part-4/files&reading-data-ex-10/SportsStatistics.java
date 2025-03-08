@@ -54,6 +54,7 @@ Games: 6
 Wins: 3
 Losses: 3 */
 
+
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -61,8 +62,30 @@ import java.util.Scanner;
 public class SportStatistics {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("File:");
+        String file = scanner.nextLine();
+        
+        System.out.println("Team:");
+        String team = scanner.nextLine();
+        
+        int gameCount = 0;
+        
+        try (Scanner reader = new Scanner(Paths.get(file))) {
+            while (reader.hasNextLine()) {
+                String line = reader.nextLine();
+                String[] splits = line.split(",");
+                
+                if (team.equals(splits[0]) || team.equals(splits[1])) {
+                    gameCount++;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        
+        System.out.println("Games: " + gameCount);
     }
 
 }
